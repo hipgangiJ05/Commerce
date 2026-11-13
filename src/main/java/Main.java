@@ -36,8 +36,9 @@ public class Main {
         );
         products.add(pd4);
 
-        for (Product product : products) {
-            System.out.printf("%-10s | %,10d원 | %-10s %n", product.getProductName(), product.getPrice(), product.getDescription());
+        for (int i=0; i <= products.size(); i++) {
+            Product product = products.get(i);
+            System.out.printf((i+1)+". %-15s | %,10d원 | %-10s %n", product.getProductName(), product.getPrice(), product.getDescription());
         }
     }
 }
