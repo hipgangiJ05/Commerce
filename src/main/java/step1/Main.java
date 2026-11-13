@@ -2,10 +2,12 @@ package step1;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         List<Product> products = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
         Product pd = new Product(
                 "Galaxy S25",
                 1200000,
@@ -41,6 +43,11 @@ public class Main {
         for (int i=0; i < products.size(); i++) {
             Product product = products.get(i);
             System.out.printf((i+1)+". %-15s | %,10d원 | %-10s %n", product.getProductName(), product.getPrice(), product.getDescription());
+        }
+        System.out.printf(0+". %-15s | %-10s %n", "Exit", "프로그램 종료");
+        int e = sc.nextInt();
+        if (e == 0) {
+            System.exit(0);
         }
     }
 }
