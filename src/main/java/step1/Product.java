@@ -1,3 +1,4 @@
+package step1;
 
 public class Product {
     private String productName;
@@ -24,5 +25,4 @@ public class Product {
     public int getStockQuantity() {
         return this.stockQuantity;
     }
-
 }

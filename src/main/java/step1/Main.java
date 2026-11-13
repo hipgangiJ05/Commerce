@@ -1,3 +1,5 @@
+package step1;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,7 +38,7 @@ public class Main {
         );
         products.add(pd4);
 
-        for (int i=0; i <= products.size(); i++) {
+        for (int i=0; i < products.size(); i++) {
             Product product = products.get(i);
             System.out.printf((i+1)+". %-15s | %,10d원 | %-10s %n", product.getProductName(), product.getPrice(), product.getDescription());
         }
