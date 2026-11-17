@@ -30,7 +30,7 @@ public class Main {
         clothingList.add(ctpd2);
         Product ctpd3 = new Product("옥스퍼드 셔츠", 39900, "탄탄한 면 소재와 단정한 카라 디자인", 35);
         clothingList.add(ctpd3);
-        Product ctpd4 = new Product("스웨트 오버사이즈 풀파카", 49900, "넉넉한 핏과 후드가 특징인 기본 풀오버형 맨투맨 후드", 120);
+        Product ctpd4 = new Product("스웨트 풀파카", 49900, "넉넉한 핏과 후드가 특징인 기본 풀오버형 맨투맨 후드", 120);
         clothingList.add(ctpd4);
 
         List<Product> foodList = new ArrayList<>();
