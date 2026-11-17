@@ -6,8 +6,8 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<Product> products = new ArrayList<>();
-        CommerceSystem cs = new CommerceSystem(products);
         Category cg = new Category("전자제품", products);
+        CommerceSystem cs = new CommerceSystem(cg);
 
         Product pd = new Product(
                 "Galaxy S25",
