@@ -5,9 +5,15 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Product> products = new ArrayList<>();
-        Category cg = new Category("전자제품", products);
-        CommerceSystem cs = new CommerceSystem(cg);
+        List<Category> cgList = new ArrayList<>();
+        List<Product> electronicsPd = new ArrayList<>();
+        List<Product> clothingPd = new ArrayList<>();
+
+        Category electronicsCg = new Category("전자제품", electronicsPd);
+        cgList.add(electronicsCg);
+
+        Category clothingCg = new Category("의류", clothingPd);
+        cgList.add(clothingCg);
 
         Product pd = new Product(
                 "Galaxy S25",
@@ -15,7 +21,7 @@ public class Main {
                 "최신 안드로이드 스마트폰",
                 200
         );
-        products.add(pd);
+        electronicsPd.add(pd);
 
         Product pd2 = new Product(
                 "iphone 16",
@@ -23,7 +29,7 @@ public class Main {
                 "Apple의 최신 스마트폰",
                 350
         );
-        products.add(pd2);
+        electronicsPd.add(pd2);
 
         Product pd3 = new Product(
                 "MacBook Pro",
@@ -31,7 +37,7 @@ public class Main {
                 "M3 칩셋이 탑재된 노트북",
                 50
         );
-        products.add(pd3);
+        electronicsPd.add(pd3);
 
         Product pd4 = new Product(
                 "AirPods Pro",
@@ -39,9 +45,13 @@ public class Main {
                 "노이즈 캔슬링 무선 이어폰",
                 500
         );
-        products.add(pd4);
+        electronicsPd.add(pd4);
 
-        cs.start();
+        CommerceSystem cs = new CommerceSystem(cgList);
 
+        for (int a = 0; a < cgList.size(); a++) {
+            Category category = cgList.get(a);
+            System.out.println(category.categoryName);;
+        }
     }
 }
