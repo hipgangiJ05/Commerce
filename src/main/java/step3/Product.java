@@ -12,4 +12,17 @@ public class Product {
         this.description = description;
         this.stockQuantity = stockQuantity;
     }
+
+    String getProductName () {
+        return this.productName;
+    }
+    int getPrice () {
+        return this.price;
+    }
+    String getDescription () {
+        return this.description;
+    }
+    int getStockQuantity () {
+        return this.stockQuantity;
+    }
 }

@@ -11,7 +11,11 @@ public class Category {
         this.products = products;
     }
 
-    public String getCategoryName() {
+    String getCategoryName() {
         return categoryName;
     }
+    List<Product> getProducts () {
+        return products;
+    }
+
 }

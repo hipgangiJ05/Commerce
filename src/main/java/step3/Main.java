@@ -13,13 +13,10 @@ public class Main {
 
         Product etpd = new Product("Galaxy S25", 1200000, "최신 안드로이드 스마트폰", 200);
         electronicsList.add(etpd);
-
         Product etpd2 = new Product("iphone 16", 1350000, "Apple의 최신 스마트폰", 350);
         electronicsList.add(etpd2);
-
         Product etpd3 = new Product("MacBook Pro", 2400000, "M3 칩셋이 탑재된 노트북", 50);
         electronicsList.add(etpd3);
-
         Product etpd4 = new Product("AirPods Pro", 350000, "노이즈 캔슬링 무선 이어폰", 500);
         electronicsList.add(etpd4);
 
@@ -29,13 +26,10 @@ public class Main {
 
         Product ctpd = new Product("유니클로 크루넥 T", 19900, "일상에서 편하게 입는 면 티셔츠", 50);
         clothingList.add(ctpd);
-
         Product ctpd2 = new Product("유니클로 배럴진", 59900, "허벅지부터 밑단까지 둥글게 떨어지는 곡선형 청바지", 80);
         clothingList.add(ctpd2);
-
         Product ctpd3 = new Product("유니클로 옥스퍼드 셔츠", 39900, "탄탄한 면 소재와 단정한 카라 디자인", 35);
         clothingList.add(ctpd3);
-
         Product ctpd4 = new Product("유니클로 스웨트 오버사이즈 풀파카", 49900, "넉넉한 핏과 후드가 특직인 기본 풀오버형 맨투맨 후드", 120);
         clothingList.add(ctpd4);
 
@@ -45,20 +39,12 @@ public class Main {
 
         Product fdpd = new Product("BBQ 황글올리브치킨", 23000, "BBQ 대표 후라이드 치킨", 240);
         foodList.add(fdpd);
-
         Product fdpd2 =new Product("BBQ 황금올리브 양념", 25500, "바삭하게 튀긴 치킨에 달콤하면서도 매콤한 양념", 180);
         foodList.add(fdpd2);
-
         Product fdpd3 = new Product("BBQ 자메이카 통다리구이", 24000, "자메이카식 저크 소스를 발라 구워낸 큼직한 통다리", 320);
         foodList.add(fdpd3);
 
-
-
         CommerceSystem cs = new CommerceSystem(cgList);
-
-        for (int a = 0; a < cgList.size(); a++) {
-            Category category = cgList.get(a);
-            System.out.println(category.categoryName);;
-        }
+        cs.start();
     }
 }
