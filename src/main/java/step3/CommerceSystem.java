@@ -22,6 +22,9 @@ public class CommerceSystem {
             }
             System.out.println("0. 종료");
             int i = sc.nextInt();
+
+            List<Product> products = category.get(i-1).getProducts();
+
             if (i == 0) {
                 System.out.println("프로그램을 종료합니다.");
                 System.exit(0);
@@ -49,12 +52,10 @@ public class CommerceSystem {
             int j = sc.nextInt();
             if (j == 0) {
                 continue;
-            } else if (j < 0 || j > category.size()) {
+            } else if (j < 0 || j > products.size()) {
                 System.out.println("잘못된 호출입니다.\n");
                 continue;
             }
-
-            List<Product> products = category.get(i-1).getProducts();
 
             Product pd2 = products.get(j-1);
             System.out.printf("선택한 제품: %-10s | %,10d원 | %-15s | 재고: %d개 %n", pd2.getProductName(), pd2.getPrice(), pd2.getDescription(), pd2.getStockQuantity());
