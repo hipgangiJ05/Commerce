@@ -45,10 +45,17 @@ public class CommerceSystem {
                     }
                     System.out.println("[장바구니 목록]");
                     for (Product storePd : shoppingCart.getStoreProduct()) {
-                        System.out.printf("%-10s | %,10d원 | %-15s | 수량: %d개 %n", storePd.getProductName(), storePd.getPrice(), storePd.getDescription(), shoppingCart.getQuantity());
+                        System.out.printf("%-10s | %,10d원 | %-15s | 수량: %d개 %n", storePd.getProductName(), storePd.getPrice(), storePd.getDescription(), storePd.getQuantity());
                     }
                     System.out.println("[총 주문 금액]");
                     System.out.printf("%,d원 %n", shoppingCart.totalAmount());
+                    System.out.println("\n주문하시겠습니까? [Y/N]");
+                    char order = scanner.next().charAt(0);
+
+                    if (order == 'Y') {
+                        System.out.println("주문이 완료되었습니다.");
+                        shoppingCart.productElimination();
+                    }
 
                     continue;
                 case 5 :
@@ -83,8 +90,18 @@ public class CommerceSystem {
             char addStore = scanner.next().charAt(0);
 
             if (addStore == 'Y') {
-                shoppingCart.addStoreProduct(selectProduct);
-                shoppingCart.addQuantity();
+                boolean bk = false;
+                for (Product addProduct : shoppingCart.getStoreProduct()) {
+                    if (addProduct.getProductName().equals(selectProduct.getProductName())) {
+                        selectProduct.setQuantity(selectProduct.getQuantity() +1);
+                        bk = true;
+                    }
+                }
+                if (!bk) {
+                    shoppingCart.addStoreProduct(selectProduct);
+                    selectProduct.setQuantity(selectProduct.getQuantity() +1);
+                }
+
                 System.out.println("\n"+selectProduct.getProductName()+"가 장바구니에 담겼습니다\n");
             }
         }

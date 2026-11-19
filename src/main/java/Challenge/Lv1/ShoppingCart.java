@@ -5,8 +5,7 @@ import java.util.List;
 
 public class ShoppingCart {
     private List<Product> storeProduct;
-    private int quantity = 0;
-    private int totalAmount = 0;
+    private int totalAmount;
 
     public ShoppingCart () {
         this.storeProduct = new ArrayList<>();
@@ -16,21 +15,22 @@ public class ShoppingCart {
         return this.storeProduct;
     }
 
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void addQuantity() {
-        quantity++;
-    }
-
     public void addStoreProduct(Product product) {
         this.storeProduct.add(product);
     }
     public int totalAmount() {
+        totalAmount = 0;
         for (Product product : this.getStoreProduct()) {
-            totalAmount += product.getPrice();
+            totalAmount += (product.getPrice() * product.getQuantity());
         }
         return this.totalAmount;
+    }
+    public void productElimination () {
+        for (Product product : this.storeProduct) {
+            product.setQuantity(0);
+        }
+        this.totalAmount = 0;
+        this. storeProduct.clear();
+
     }
 }
