@@ -18,4 +18,7 @@ public class Product {
     public String getDescription () {return this.description;}
     public int getStockQuantity () {return this.stockQuantity;}
 
+    public void setStockQuantity(int stockQuantity) {
+        this.stockQuantity = stockQuantity;
+    }
 }
