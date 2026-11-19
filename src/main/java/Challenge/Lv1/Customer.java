@@ -1,4 +1,4 @@
-package step4;
+package Challenge.Lv1;
 
 public class Customer {
     private String customerName;
@@ -7,17 +7,11 @@ public class Customer {
 
     public Customer (String customerName, String email, String membership) {
         this.customerName = customerName;
-        this.email = email;
+        this.email =  email;
         this.membership = membership;
     }
 
-    public String getCustomerName () {
-        return this.customerName;
-    }
-    public String getEmail () {
-        return this.email;
-    }
-    public String getMembership () {
-        return this.membership;
-    }
+    public String getCustomerName () {return this.customerName;}
+    public String getEmail () {return this.email;}
+    public String getMembership () {return this.membership;}
 }

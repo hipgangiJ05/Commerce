@@ -1,4 +1,4 @@
-package step2;
+package Essential.step2;
 
 public class Product {
     String productName;
