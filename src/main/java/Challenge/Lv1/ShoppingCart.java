@@ -31,6 +31,5 @@ public class ShoppingCart {
         }
         this.totalAmount = 0;
         this. storeProduct.clear();
-
     }
 }
